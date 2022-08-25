@@ -1,8 +1,13 @@
-from django.contrib import admin
 from django.urls import path
 from .import views
 
+
+app_name = 'listings'
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.index,name='index')
+    # Homepage
+    path(' ', views.all_listings, name='all_listings'),
+    # Listings Page
+    path('all_listings/', views.all_listings, name='all_listings'),
+   
 ]
